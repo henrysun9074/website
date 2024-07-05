@@ -1,5 +1,5 @@
 # 🌌 Henry Sun
-Personal website built using Milky-Way template
+Personal website built using Milky-Way template. Hosted using netlify at [henrysun.netlify.app](henrysun.netlify.app). 
 
 <p align="center">
   <img align="center" alt="Astro" src="https://storage.googleapis.com/dev-portal-bucket/qh7sxskkyty67x3fznww5mwv4pxq59dk2aax51.webp"/>
