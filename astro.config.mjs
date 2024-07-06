@@ -1,12 +1,10 @@
-import { defineConfig } from 'astro/config'
+import { defineConfig } from 'astro/config';
 import node from '@astrojs/node';
+import netlify from "@astrojs/netlify";
 
-// export default defineConfig({
-//     // site: 'https://astronaut.github.io',
-//     // // base: 'my-repo'
-
-// })
-    
+// https://astro.build/config
 export default defineConfig({
-  // output: 'server',
-});
+  output: "server",
+  adapter: netlify()
+} // output: 'server',
+);
