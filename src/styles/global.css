@@ -11,6 +11,58 @@
     --body: 'Josefin Sans', sans-serif; 
 }
 
+/* MY CHANGES */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px auto;
+    font-family: 'Josefin Sans', cursive; /* Add this line to use Josefin Sans font */
+}
+.contact-form label {
+    margin: 10px 0 5px;    
+}
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Josefin Sans', cursive; /* Add this line to use Josefin Sans font */
+}
+.contact-form button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: hsl(209, 64%, 41%);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Josefin Sans', cursive; /* Add this line to use Josefin Sans font */
+}
+.contact-form button:hover {
+    background-color: #7400b3;
+}
+
+a:link {
+    color: rgb(195, 115, 169);
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: rgb(195, 115, 169);
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(28, 128, 186);
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+/* DEFAULT SETTINGS */
+
 html {
     background-color: var(--background);
     color: var(--text);

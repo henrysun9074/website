@@ -2,7 +2,74 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 const pageTitle = "About Me";
+export async function handleRequest(request, params) {
+    if (request.method === 'POST') {
+      try {
+        const formData = await request.formData();
+        const name = formData.get('username');
+        const email = formData.get('email');
+        const message = formData.get('message');
+        console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
+        
+        // Return a response with a success message
+        return {
+          status: 200,
+          body: 'Thank you for your message!',
+        };
+      } catch (error) {
+        console.error('Error handling form submission:', error);
+        return {
+          status: 500,
+          body: 'Internal Server Error',
+        };
+      }
+    }
+  }
+
 ---
+<Layout pageTitle={pageTitle}>
+    <div class="img center">
+        <img width="300" height="259" alt="RaccoonLaptopGif" src="/404.webp"/>
+    </div>
+    <h2>About Me</h2>
+    <h3>Research Interests</h3>
+    <p>
+        My other research interests include the philosophy of biology (evolutionary theory in particular), computer vision, icthyology, global change biology,
+        integrative modeling, and eDNA metabarcoding analysis. In general, I am curious about the application of new software tools in marine biology, and 
+        integrating these tools alongside traditional approaches to extract new findings from biological data. I aim to combine field, lab, and computer work through a holistic approach to research.
+        Feel free to reach out at hs325[at]duke.edu or through the form below.   
+    </p>
+    <h3>Hobbies</h3>
+    <p>
+        Games: Basketball, <s>soccer</s> football*, baseball, table tennis, competitive Scrabble
+    </p>
+    <p>
+        Favorite Music: experimental and underground hip-hop, glitch pop, hyperpop, indie rock, singer-songwriter, shoegaze, dream pop. 
+        See <a href="https://henrysun.netlify.app/personal/">Personal</a> for more.
+    </p>
+    <p>
+        Miscellaneous: Chinese cooking, metaphysics, the color purple, being outdoors with animals of all kinds, Internet culture, stargazing, Pokemon, and web development now I guess...
+    </p>
+    <h2>Contact
+    </h2>
+    <p>
+        Right now, this form is kind of broken. Hoping to get the server-side handling fixed soon. 
+        Instead, I recommend directing all inquires to my email (see the site footer).
+    </p>
+    <form class="contact-form" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button>Send</button>
+    </form>
+        
+</Layout>
+
 <style>
     h1 {
         text-align: left;
@@ -21,66 +88,5 @@ const pageTitle = "About Me";
     .center {
         text-align: center;
     }
-    .contact-form {
-        display: flex;
-        flex-direction: column;
-        max-width: 400px;
-        margin: 20px auto;
-        font-family: 'Josefin Sans', cursive; /* Add this line to use Josefin Sans font */
-    }
-    .contact-form label {
-        margin: 10px 0 5px;    
-    }
-    .contact-form input, .contact-form textarea {
-        padding: 10px;
-        font-size: 16px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-family: 'Josefin Sans', cursive; /* Add this line to use Josefin Sans font */
-    }
-    .contact-form button {
-        padding: 10px;
-        font-size: 16px;
-        background-color: hsl(209, 64%, 41%);
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-family: 'Josefin Sans', cursive; /* Add this line to use Josefin Sans font */
-    }
-    .contact-form button:hover {
-        background-color: #7400b3;
-    }
-</style>
 
-<Layout pageTitle={pageTitle}>
-    <div class="img center">
-        <img width="300" height="259" alt="RaccoonLaptopGif" src="/404.webp"/>
-    </div>
-    <h2>About Me</h2>
-    <h3>Research Interests</h3>
-    <p>
-        
-        My other research interests include the philosophy of biology (evolutionary theory in particular), computer vision, icthyology, global change biology,
-        integrative modeling, and eDNA metabarcoding analysis. In general, I am curious about the application of new software tools in marine biology, and 
-        integrating these tools alongside traditional approaches to extract new findings from biological data. I aim to combine field, lab, and computer work through a holistic approach to research.
-        Feel free to reach out at hs325[at]duke.edu or through the form below.   
-    </p>
-    <h3>Hobbies</h3>
-    <h2>Contact
-    </h2>
-    <form class="contact-form" action="/api/submit-form" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-        
-        <button type="submit">Send</button>
-    </form>
-        
-</Layout>
+</style>
