@@ -9,7 +9,13 @@ const pageTitle = "Works";
     <div class="gif">
         <img width="300" height="250" alt="RaccoonLaptopGif" src="/laptop.webp"/>
     </div>
-    <h2>Projects</h2>
+    <h2>Recent Projects</h2>
+    <div>
+    </div>
+    <p>
+        Highlighted below are links with more information about four recent research projects I've worked on.
+        For a complete list of experiences, see my CV below.
+    </p>
     <ul role="list" class="link-card-grid">
         {allProjects.map((card) => <Card 
             url={`/projects/${card.slug}/`} 
@@ -18,5 +24,37 @@ const pageTitle = "Works";
             body={card.data.description}
         />)}
     </ul>
+    <div></div>
+    <h2>My CV </h2> 
+
+    <!-- <div></div>
+    <div></div> -->
+
+    <div class="pdf-container">
+    <embed class="pdf-embed" src="/June2024HSCV.pdf" type="application/pdf" width="100%" height="600px" />
+    </div>
+    <p>
+        Click
+        <a href="/June2024HSCV.pdf" target="_blank">here</a>
+        to open in a new tab. Last updated June 2024.
+    </p>
+    
+    <style>
+        .pdf-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh; /* Adjust height as needed */
+        }
+        .pdf-embed {
+        width: 100%; /* Adjust width as needed */
+        max-width: 800px; /* Example maximum width */
+        height: 100%;
+        }   
+    </style>
+
+    
+
+
 </Layout>
 
