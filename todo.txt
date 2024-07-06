@@ -1,0 +1,9 @@
+## TODO LIST FOR SITE
+
+1. add image to about-me below research interests
+2. update 'latest updates' on index page 
+3. set up 'research' page with past projects and upload/embed current version of CV
+4. set up 'music' page with some cool features. spotify random album picker, add in a few recently listened albums + topster
+5. set up 'basketball' page or sports page with fun memes or something
+6. set up 'animals' page with a grid of images of favorite animals
+7. set up 'cooking' page with a link to vsco or some other repository of images
