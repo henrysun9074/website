@@ -4,17 +4,20 @@ import ThemeIcon from './ThemeIcon.astro';
 <div class="navbar">
     <div class="navbar__title">
         <a href="/">Henry Sun</a>
-    </div>
+    </div>  
     <div class="navbar__menu">
         <a href="/about-me/">About Me</a>
         <!-- <a href="/education/">Education</a> -->
         <a href="/research/">Research</a>
-        <!-- <a href="/music/">Music</a> -->
         <a href="/personal/">Personal</a>
-        <!-- <a href="/other/">Other</a> -->
-        <a href="/contact/">Contact</a>
+        <!-- <a href="/contact/">Contact</a> -->
 
         <ThemeIcon />
     </div>
 </div>
 
+<style>
+    .navbar__menu a {
+      font-size: 16px; /* Adjust the size as needed */
+    }
+  </style>
