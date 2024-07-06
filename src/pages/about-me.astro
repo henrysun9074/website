@@ -49,7 +49,7 @@ export async function handleRequest(request, params) {
         I'd like to be able to look at my website and feel like I'm firing on all cylinders. 
         There is grandeur in this view of life! :P
     </p>
-    <img src="/my_imgs/mazulla.png" width="500" class="center">
+    <img src="/mazulla.png" width="400" class="center">
     <h4>Do I contradict myself?
         Very well then I contradict myself,
         (I am large, I contain multitudes.)
@@ -128,6 +128,12 @@ export async function handleRequest(request, params) {
         font-weight: normal;
         unicode-bidi: isolate;
 } */
+    h4 {
+        text-align: center;
+        font-family: 'Papyrus', cursive; 
+        font-weight: normal;
+        margin-bottom: 1em; 
+    }
     p {
         text-align: left;
         font-family: 'Josefin Sans', cursive; 
@@ -135,12 +141,6 @@ export async function handleRequest(request, params) {
     }
     .center {
         text-align: center;
-    }
-    h4 {
-        text-align: left;
-        font-family: 'Courier', fantasy; 
-        text-align: center;
-        font-size: 18px;
     }
     .center {
         display: block;
