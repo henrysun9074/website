@@ -8,5 +8,5 @@ import node from '@astrojs/node';
 // })
     
 export default defineConfig({
-  // output: 'server',
+  output: 'server',
 });
