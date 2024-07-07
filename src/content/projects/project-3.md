@@ -1,5 +1,5 @@
 ---
-title: 'Blue Crab Salinity-Based Sympatric Speciation'
+title: 'Blue Crab Sympatric Speciation'
 description: 'Haplotype comparison of low- and high-salinity blue crabs to search for signs of speciation'
 image:
     url: '/bluecrab.jpg'
