@@ -7,16 +7,33 @@ const { frontmatter } = Astro.props;
         <img width="300" height="259" alt="RaccoonLaptopGif" src="/laptop.webp"/>
     </div>
     <h2>{frontmatter.title}</h2>
-    <slot />
     <ul class="badge__list">
-        <li><span class="badge badge--item">PLATFORM</span>{frontmatter.platform}</li>
-        <li><span class="badge badge--item">STACK</span>{frontmatter.stack}</li>
+        <li><span class="badge badge--item">KEYWORDS</span>{frontmatter.keywords}</li>
+        <li><span class="badge badge--item">ADVISOR</span>{frontmatter.advisor}</li>
         <li><span class="badge badge--item">WEBSITE</span><a class="badge__link" href={frontmatter.website} target="_blank">{frontmatter.website}</a></li>
-        <li><span class="badge badge--item">GITHUB</span><a class="badge__link" href={frontmatter.github} target="_blank">{frontmatter.github}</a></li>
+        <!-- <li><span class="badge badge--item">GITHUB</span><a class="badge__link" href={frontmatter.github} target="_blank">{frontmatter.github}</a></li> -->
     </ul>
+    <slot />
     <div class="center">
         <img class="pro-img" width="500px" height="281" src={frontmatter.worksImage1.url} alt={frontmatter.worksImage1.alt} />
         <img class="pro-img" width="500px" height="281" src={frontmatter.worksImage2.url} alt={frontmatter.worksImage2.alt} />
     </div>
 </BaseLayout>
 
+<style>
+    ul,ol {
+        margin: 0 0;
+        text-align: left;
+        line-height: 1.4;
+    }
+    h2 {
+        text-align: left;
+        font-family: 'Courier New', sans serif; 
+        margin-bottom: 1em; 
+    }
+    /* p {
+        text-align: left;
+        font-family: 'Josefin Sans', cursive; 
+        margin-bottom: 1em; 
+    } */
+</style>

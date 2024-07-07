@@ -1,19 +1,22 @@
 ---
-title: 'Project 2'
-description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci'
+title: 'AI-Generated Right Whales'
+description: 'Improving rare species detection and conservation using AI-generated training data augmentation'
 image:
-    url: '/GitHub.webp'
-    alt: 'GitHub wallpaper'
+    url: '/whale.webp'
+    alt: 'Whale wallpaper'
 worksImage1:
     url: '/image-1.webp'
     alt: 'first image of your project.'
 worksImage2:
     url: '/image-2.webp'
     alt: 'second image of your project.'
-platform: Web
-stack: Astro, JavaScript
-website: https://astro-milky-way.netlify.app/
-github: https://github.com/ttomczak3/Milky-Way
+keywords: North Atlantic Right Whale, synthetic imagery, diffusion models, LoRA, deep learning
+advisor: Dr. Dave Johnston, Duke University
+website: https://github.com/henrysun9074/smartwhales
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus a tortor at molestie. Sed pellentesque leo auctor, auctor lorem nec, venenatis risus. Vivamus commodo ipsum vitae orci finibus, vel porta nunc viverra. In hac habitasse platea dictumst. Nunc pretium, ligula ultricies consequat sollicitudin, enim ex ullamcorper nisl.
+### Project Overview
+
+<p class="project-description">Duke Independent Study project and planned senior thesis.</p>
+
+### Current Progress

@@ -17,10 +17,10 @@ const projectsCollection = defineCollection({
         url: z.string(),
         alt: z.string()
       }),
-      platform: z.string(),
-      stack: z.string(),
-      website: z.string(),
-      github: z.string(),
+      keywords: z.string(),
+      advisor: z.string(),
+      website: z.string().optional()
+      // github: z.string().optional()
     })
 });
 

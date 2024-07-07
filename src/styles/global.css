@@ -12,6 +12,20 @@
 }
 
 /* MY CHANGES */
+.project-description {
+    /* font-size: 1.2em;
+    line-height: 1.8; */
+    text-align: left;
+    font-family: 'Josefin Sans', cursive; 
+    margin-bottom: 1em; 
+  }
+  
+.project-results {
+    text-align: left;
+    font-family: 'Josefin Sans', cursive; 
+    margin-bottom: 1em; 
+  }
+  
 
 .contact-form {
     display: flex;
@@ -225,7 +239,7 @@ small, li {
 }
 
 .card__link:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .link-card-grid {

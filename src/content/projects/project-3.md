@@ -1,8 +1,8 @@
 ---
-title: 'Project 3'
-description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci'
+title: 'Blue Crab Salinity-Based Sympatric Speciation'
+description: 'Haplotype comparison of low- and high-salinity blue crabs to search for signs of speciation'
 image:
-    url: '/GitHub.webp'
+    url: '/bluecrab.jpg'
     alt: 'GitHub wallpaper'
 worksImage1:
     url: '/image-1.webp'
@@ -10,10 +10,13 @@ worksImage1:
 worksImage2:
     url: '/image-2.webp'
     alt: 'second image of your project.'
-platform: Web
-stack: Astro, JavaScript
-website: https://astro-milky-way.netlify.app/
-github: https://github.com/ttomczak3/Milky-Way
+keywords: sympatric speciation, blue crab, salinity, mate choice, median-joining haplotype network, CO1 barcoding
+advisor: Dr. Dan Rittschof, Duke University Marine Lab
+website: https://github.com/henrysun9074/consensus 
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus a tortor at molestie. Sed pellentesque leo auctor, auctor lorem nec, venenatis risus. Vivamus commodo ipsum vitae orci finibus, vel porta nunc viverra. In hac habitasse platea dictumst. Nunc pretium, ligula ultricies consequat sollicitudin, enim ex ullamcorper nisl.
+### Project Overview
+
+<!-- <p class="project-description">Duke Independent Study project and planned senior thesis.</p> -->
+
+### Current Progress

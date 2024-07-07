@@ -1,19 +1,22 @@
 ---
-title: 'Project 1'
-description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci'
+title: 'Machine Learning eDNA Analysis'
+description: 'Dimensionality reduction of fish eDNA data and modeling against oceanographic data using random forests'
 image:
-    url: '/GitHub.webp'
-    alt: 'GitHub wallpaper'
+    url: '/edna.jpg'
+    alt: 'eDNA wallpaper'
 worksImage1:
     url: '/image-1.webp'
     alt: 'first image of your project.'
 worksImage2:
     url: '/image-2.webp'
     alt: 'second image of your project.'
-platform: Web
-stack: Astro, JavaScript
-website: https://astro-milky-way.netlify.app/
-github: https://github.com/ttomczak3/Milky-Way
+keywords: eDNA, biodiversity, dimensionality reduction, random forest, CTD profile, community structure, DOPPIO
+advisor: Dr. Josh Kohut, Rutgers University
+website: https://github.com/henrysun9074/fishics
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus a tortor at molestie. Sed pellentesque leo auctor, auctor lorem nec, venenatis risus. Vivamus commodo ipsum vitae orci finibus, vel porta nunc viverra. In hac habitasse platea dictumst. Nunc pretium, ligula ultricies consequat sollicitudin, enim ex ullamcorper nisl.
+### Project Overview
+
+<p class="project-description">Summer 2024 NSF REU at Rutgers University. Working on evaluating the effectiveness of various dimensionality reduction techniques for encoding eDNA data, including linear and non-linear methods: principal component analysis (PCA), tSNE and UMAP, and a custom variational autoencoder (VAE). Subsequently aiming to use oceanographic data generated from the DOPPIO model and CTD profiles taken during eDNA sampling to predict fish community structure.</p>
+
+### Project Outputs
