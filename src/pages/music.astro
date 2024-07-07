@@ -1,16 +1,174 @@
 ---
 import Layout from '../layouts/Layout.astro';
 const pageTitle = "Music";
-
 ---
+
 <Layout pageTitle={pageTitle}>
     <div class="gif">
         <img width="300" height="250" src="/404.webp"/>
     </div>
     
     <h1>Music</h1>
-    <p>Will be updated with some fun buttons.</p>
-    <!-- Add more content about music here -->
+    <p>I don't like writing about music, so there will mostly just be links to songs 
+        and playlists here and nothing else. Please send any recommendations you have ^_^</p>
+    <p>Last Updated July 7, 2024</p>
+    <h2>Up Next:</h2>
+    <p> I made this playlist a couple months ago with a lot of shoegaze/dream pop albums I'm in the process of listening/relistening to
+        and have started to work through it slowly.
+    </p>
+    <div> </div>    
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1mKXezS7NyJcrFFbf11k8Z?utm_source=generator" width="100%" height="500" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    <h2>Currently Listening To:</h2>
+    <p>And also a lot of Charli xcx and Yung Lean. Sometimes both at once with the 360 remix too!</p>
+    <div> </div>    
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <div class="numbertext">1 / 4</div>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/4vGxWRaA3iG6w8st1eOtlt?utm_source=generator" width="100%" height="500" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">2 / 4</div>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2Ul7B1LEHxXzYubtkTMENs?utm_source=generator" width="100%" height="500" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>       
+        </div> 
+        <div class="mySlides">
+            <div class="numbertext">3 / 4</div>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/1nAQg0AjzpuT7lINu1J87y?utm_source=generator" width="100%" height="500" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>      
+        </div> 
+        <div class="mySlides">
+            <div class="numbertext">4 / 4</div>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/443fOM9A1XN8A0HImpYKVT?utm_source=generator" width="100%" height="500" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>        </div> 
+        <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+    </div>
+    <br>
+    <!-- <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div> -->
+    <h3>Topster</h3>
+    <p>
+        Because 5 artists on Spotify Wrapped just wasn't enough for the annoying people community, we have this!
+        I haven't actually made an updated topster in a long time so these are my top albums sorted by playcount from 
+        the last 365 days.
+    </p>
+    <p>
+        <a href="https://www.last.fm/user/henrysun9074">Last.fm</a> (click)
+    </p>
+    <img src="chart.png" width="500px">
 </Layout>
 
+<style>
+* {box-sizing:border-box}
+    p {
+        text-align: left;
+        font-family: 'Josefin Sans', cursive; 
+        margin-bottom: 1em; 
+    }
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  height: 500px; 
+}
 
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  height: 100%;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-family: Josefin Sans;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+</style>
+
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides") as HTMLCollectionOf<HTMLElement>;
+    for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 5000); 
+}
+
+// var slideIndex = 1;
+
+// function plusSlides(n: number) {
+//   showSlides(slideIndex += n);
+// }
+
+// function showSlides(n: number) {
+//   var i: number;
+//   var slides = document.getElementsByClassName("mySlides") as HTMLCollectionOf<HTMLElement>;
+// //   const dots = document.getElementsByClassName("dot") as HTMLCollectionOf<HTMLElement>;
+//   if (n > slides.length) { slideIndex = 1 }
+//   if (n < 1) { slideIndex = slides.length }
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";
+//   }
+//   slides[slideIndex-1].style.display = "block";
+// }
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   showSlides(slideIndex);
+// });
+</script>
