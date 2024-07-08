@@ -17,6 +17,6 @@ website: https://github.com/henrysun9074/consensus
 
 ### Project Overview
 
-<!-- <p class="project-description">Duke Independent Study project and planned senior thesis.</p> -->
+<p class="project-description">As a research assistant in spring 2024, I extracted DNA from 7 Sardinian blue crab samples and used Nanopore sequencing to generate consensus sequences for the CO1 gene. Next steps will include alignment of these sequences to preexisting haplotypes from blue crabs sampled from habitats of various salinities for analysis.</p>
 
 ### Current Progress
