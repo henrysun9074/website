@@ -20,3 +20,5 @@ website: https://github.com/henrysun9074/smartwhales
 <p class="project-description">Duke Independent Study project and planned senior thesis. Awarded $8,000 NASA NC Space Grant for 2024-25 school year to conduct research.</p>
 
 ### Current Progress
+
+### Key Documents
