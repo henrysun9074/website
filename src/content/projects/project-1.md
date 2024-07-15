@@ -1,9 +1,9 @@
 ---
-title: 'Machine Learning eDNA Analysis'
+title: 'Machine Learning Fish eDNA Analysis'
 description: 'Dimensionality reduction of fish eDNA data and modeling against oceanographic data using random forests'
 image:
-    url: '/edna.jpg'
-    alt: 'eDNA wallpaper'
+    url: '/pelagic.webp'
+    alt: 'pelagic fish wallpaper'
 worksImage1:
     url: '/VAE-out.png'
     alt: 'first image of your project.'
