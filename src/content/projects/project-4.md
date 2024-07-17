@@ -17,6 +17,10 @@ website: https://docs.google.com/document/d/1gdn5Yc0ZhydVWrD6fmrrjQN6Qd2-Hh-y56K
 
 ### Project Overview
 
-<p class="project-description">Summer 2023 project as a Bonaventura Fellow at the Duke Marine Lab. More info TBA</p>
+<p class="project-description">Summer 2023 project as a Bonaventura Fellow at the Duke Marine Lab. More info TBA.</p>
 
-### Current Progress
+### Project Results
+
+### Lab Work from 2024 Spring
+
+### Future Work
