@@ -11,13 +11,8 @@ const { frontmatter } = Astro.props;
         <li><span class="badge badge--item">KEYWORDS</span>{frontmatter.keywords}</li>
         <li><span class="badge badge--item">ADVISOR</span>{frontmatter.advisor}</li>
         <li><span class="badge badge--item">WEBSITE</span><a class="badge__link" href={frontmatter.website} target="_blank">{frontmatter.website}</a></li>
-        <!-- <li><span class="badge badge--item">GITHUB</span><a class="badge__link" href={frontmatter.github} target="_blank">{frontmatter.github}</a></li> -->
     </ul>
     <slot />
-    <div class="center">
-        <img class="pro-img" width="500px" height="281" src={frontmatter.worksImage1.url} alt={frontmatter.worksImage1.alt} />
-        <img class="pro-img" width="500px" height="281" src={frontmatter.worksImage2.url} alt={frontmatter.worksImage2.alt} />
-    </div>
 </BaseLayout>
 
 <style>
@@ -28,12 +23,40 @@ const { frontmatter } = Astro.props;
     }
     h2 {
         text-align: left;
-        font-family: 'Courier New', sans serif; 
+        font-family: 'Courier New', sans-serif; 
         margin-bottom: 1em; 
     }
-    /* p {
+    h4 {
+        text-align: center;
+        font-family: 'Papyrus', cursive; 
+        font-weight: normal;
+        margin-bottom: 1em; 
+    }
+    /* p, .project-description {
         text-align: left;
         font-family: 'Josefin Sans', cursive; 
         margin-bottom: 1em; 
     } */
+    .center {
+        text-align: center;
+        margin: 2em 0;
+    }
+    .pro-img {
+        margin: 1em 0;
+    }
+    a:link {
+        color: rgb(195, 115, 169);
+        background-color: transparent;
+        text-decoration: none;
+    }
+    a:visited {
+        color: rgb(195, 115, 169);
+        background-color: transparent;
+        text-decoration: none;
+    }
+    a:hover {
+        color: rgb(28, 128, 186);
+        background-color: transparent;
+        text-decoration: underline;
+    }
 </style>
