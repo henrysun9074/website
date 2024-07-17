@@ -15,6 +15,9 @@ advisor: Dr. Josh Kohut, Rutgers University
 website: https://github.com/henrysun9074/fishics
 ---
 
+<div></div>
+<div></div>
+
 ### Project Overview
 
 <p class="project-description">Summer 2024 NSF REU project conducted over 10 weeks at Rutgers University culminating in poster presentation. Addressing two primary research questions:</p>
@@ -22,6 +25,8 @@ website: https://github.com/henrysun9074/fishics
 <p class="project-description">Q1: Evaluating the effectiveness of various dimensionality reduction techniques for encoding eDNA data, including linear and non-linear methods: principal component analysis (PCA), t-SNE and UMAP, and a custom variational autoencoder (VAE).</p>
 
 <p class="project-description">Q2: Using oceanographic data (namely salinity, temperature, and density/stratification) generated from Rutgers' DOPPIO model and CTD profiles taken during eDNA sampling to predict fish community structure using random forests. This page will be updated with preliminary results at the end of the REU August 9th; for continuous updates or to preview code please visit the GitHub page linked above. For a map of eDNA stations (will also be updated as I accumulate more data), click <a href ="https://www.google.com/maps/d/u/0/edit?mid=1O0FkFMXOdc6LRBarOZB-fRrcTFiQ0r8&usp=sharing">here.</a></p>
+
+<div></div>
 
 ### Rationale
 
@@ -33,6 +38,7 @@ Understanding how fish communities change/move with the seasons is important for
 
 From a more technical perspective, this research also seeks to apply new computing methods like neural networks (autoencoders) and tree-based machine learning models towards analysis of eDNA data, serving as a framework to guide future research.
 
+<div></div>
 
 ### Methodology and Principal Results
 
@@ -41,10 +47,13 @@ From a more technical perspective, this research also seeks to apply new computi
 <div class="center">
     <img class="pro-img" width="500px" src="/figure1.png" alt="first image of your project." />
 </div>
+
 <div></div>
-<p></p>
+
 
 <p class="project-description">Q2: I'm using sklearn for training a simple random forest classifier. eDNA data was in the form of a .csv with relative abundance values (ranging from 0 to 1) for several dozen detected species. For classification purposes, read abundance was converted to a binary format where all species detected at a particular site were represented as a 1. The model was then asked to predict the presence/absence of each species using surface and bottom temperature, salinity, and stratification. For the remainder of the project (~3 weeks), I will focus on building a more detailed classifier aiming to identify presence of fish communities (defined using K-means clustering maps) across different seasons using similar oceanographic variables.</p>
+
+<div></div>
 
 ### Project Outputs and Future Directions
 

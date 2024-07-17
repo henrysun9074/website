@@ -80,7 +80,9 @@ a:hover {
     background-color: transparent;
     text-decoration: underline;
 }
-
+div {
+    padding: 5px;
+}
 /* DEFAULT SETTINGS */
 
 html {

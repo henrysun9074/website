@@ -14,6 +14,8 @@ keywords: sympatric speciation, blue crab, salinity, mate choice, median-joining
 advisor: Dr. Dan Rittschof, Duke University Marine Lab
 website: https://github.com/henrysun9074/consensus 
 ---
+<div></div>
+<div></div>
 
 ### Project Overview
 
@@ -27,6 +29,7 @@ Dr. Dan has managed to collect blue crabs from a variety of low- and high- salin
 
 <h4>It was found that 4x as many high salinity crabs were haplotype H3!!</h4>
 
+<div></div>
 
 ### Current Progress
 

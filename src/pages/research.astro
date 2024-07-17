@@ -3,17 +3,17 @@ import { getCollection } from "astro:content";
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 const allProjects = await getCollection("projects");
-const pageTitle = "Works";
+const pageTitle = "Research";
 ---
 <Layout pageTitle={pageTitle}>
     <div class="gif">
         <img width="300" height="250" alt="RaccoonLaptopGif" src="/laptop.webp"/>
     </div>
-    <h2>Recent Projects</h2>
+    <h2>My Research</h2>
     <div>
     </div>
     <p>
-        Highlighted below are links with more information about a few recent research projects I've worked on.
+        Highlighted below are pages with more information about a few recent research projects I've worked on.
         For a complete list of experiences, see my CV below.
     </p>
     <ul role="list" class="link-card-grid">
