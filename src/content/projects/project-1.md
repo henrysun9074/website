@@ -51,7 +51,7 @@ From a more technical perspective, this research also seeks to apply new computi
 <div></div>
 
 
-<p class="project-description">Q2: I'm using sklearn for training a simple random forest classifier. eDNA data was in the form of a .csv with relative abundance values (ranging from 0 to 1) for several dozen detected species. For classification purposes, read abundance was converted to a binary format where all species detected at a particular site were represented as a 1. The model was then asked to predict the presence/absence of each species using surface and bottom temperature, salinity, and stratification. For the remainder of the project (~3 weeks), I will focus on building a more detailed classifier aiming to identify presence of fish communities (defined using K-means clustering maps) across different seasons using similar oceanographic variables.</p>
+<p class="project-description">Q2: I'm using sklearn for training a simple random forest classifier. eDNA data was in the form of a .csv with relative abundance values (ranging from 0 to 1) for several dozen detected species. For classification purposes, read abundance was converted to a binary format where all species detected at a particular site were represented as a 1. The model was then asked to predict the presence/absence of each species using surface and bottom temperature, salinity, and stratification. Then, I used k-means clustering to identify the optimal # of fish communities by season, group eDNA stations into communities, and predict community assignment from the same oceanographic variables. </p>
 
 <div></div>
 
@@ -60,8 +60,10 @@ From a more technical perspective, this research also seeks to apply new computi
 <div class="center">
     <img class="pro-img" width="500px" src="/VAE-out.png" alt="first image of your project."/>
     <h4>Above: Initial VAE clustering of eDNA samples taken across three seasons. VAE outputs did not exhibit strong clustering and performed poorly in terms of capturing variation within the data.<h4>
-    <img class="pro-img" width="500px" src="/image-2.webp" alt="second image of your project."/>
-    <h4>TBA, random forest model results.</h4>
  </div>
 
-Upon project completion, I will update this page with a link to my initial proposal and final poster. Stay tuned! 
+### Links to Project Outputs: 
+<a href="https://drive.google.com/file/d/1x8JHUT7h3VcprLczOtX2KPqdUL2vghds/view?usp=sharing">Final Poster</a>, 
+<a href ="https://docs.google.com/document/d/1yZCSKR0KeJFRHDyaQCTumU_mIHaK1x27gXaZD4smk2Y/edit?usp=sharing">Initial Proposal</a>
+
+See the final poster for a more concise look at the direct model results, especially for Q2. Models were generally far more accurate in summer stratified than winter mixed seasons, with dominant taxa also differing by season. I'm looking to write up the results for this project and get it published this fall! 
