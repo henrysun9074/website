@@ -19,7 +19,7 @@ website: https://github.com/henrysun9074/consensus
 
 ### Project Overview
 
-Sympatric speciation refers to the diversification of two lineages into two genetically distinct species while both species still occupy the same geographic region. This process could potentially be ongoing in blue crabs, which have been observed to separate by salinity in estuaries (low-salinity crabs are frequently much larger). If low- and high-salinity blue crab genotypes were genetically distinct, then sympatric speciation could be ongoing. 
+Sympatric speciation refers to the diversification of two lineages into two genetically distinct species while both species still occupy the same geographic region. This process could potentially be ongoing in blue crabs, which have been observed to separate by salinity in estuaries (<a href="https://journals.bilpubgroup.com/index.php/jfs/article/view/2438">Moran et al. 2020</a>). If low- and high-salinity blue crab genotypes were genetically distinct, then sympatric speciation could be ongoing. 
 
 Dr. Dan has managed to collect blue crabs from a variety of low- and high- salinity environments, including Beaufort, Lake Mattamuskeet, the Chesapeake Bay, and Turkey. After CO1 barcoding of these samples, a median-joining haplotype network was generated which provides a high-level overview of genetic differences between crab populations. Below is a poster summarizing past work done in the lab on this topic. 
 

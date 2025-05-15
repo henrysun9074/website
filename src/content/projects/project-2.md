@@ -1,76 +1,69 @@
 ---
-title: 'AI-Generated Right Whales'
-description: 'Improving rare species detection and conservation using AI-generated training data augmentation'
+title: 'Machine Learning Fish eDNA Analysis'
+description: 'Dimensionality reduction of fish eDNA data and modeling against oceanographic data using random forests'
 image:
-    url: '/whale.webp'
-    alt: 'Whale wallpaper'
+    url: '/pelagic.webp'
+    alt: 'pelagic fish wallpaper'
 worksImage1:
-    url: '/image-1.webp'
+    url: '/VAE-out.png'
     alt: 'first image of your project.'
 worksImage2:
     url: '/image-2.webp'
     alt: 'second image of your project.'
-keywords: North Atlantic Right Whale, synthetic imagery, diffusion models, LoRA, deep learning
-advisor: Dr. Dave Johnston, Duke University
-website: https://github.com/henrysun9074/smartwhales
+keywords: eDNA, fish biodiversity, dimensionality reduction, random forest, CTD profile, community structure, DOPPIO
+advisor: Dr. Josh Kohut, Rutgers University
+website: https://github.com/henrysun9074/fishics
 ---
 
 <div></div>
 <div></div>
 
-### Project Overview and Rationale
+### Project Overview
 
-<p class="project-description">Duke Independent Study project and planned senior thesis. Awarded $8,000 NASA NC Space Grant for 2024-25 school year to conduct research. </p>
+<p class="project-description">Summer 2024 NSF REU project conducted over 10 weeks at Rutgers University culminating in poster presentation. Addressing two primary research questions:</p>
 
-<p>Side note: The GitHub page linked above isn't really updated since most of my work thus far was done on HuggingFace WebUI/Colab with purchased GPU hours. However, all information/code for training images will be made completely open-source later on!</p>
+<p class="project-description">Q1: Evaluating the effectiveness of various dimensionality reduction techniques for encoding eDNA data, including linear and non-linear methods: principal component analysis (PCA), t-SNE and UMAP, and a custom variational autoencoder (VAE).</p>
 
-I started this project in October 2023 after meeting with my advisor, Dave, and we quickly realized that despite the endless stream of innovations within the field of generative AI flooding the general public, very few researchers were thinking about its applications in ecology and conservation biology. While the creativity of random internet users was seemingly endless (see below), what of using these new tools to generate some helpful scientific images?
-
-<div class = "center">
-    <img class="pro-img" width="300px" src="/dallefunny.jpg" alt="second image of your project."/>
-</div>
-
-We started this project looking specifically at improving detection of right whales through training dataset augmentation, in collaboration with the Canadian Space Agency on a project called 'Smartwhales'. Their aim is to develop continuous monitoring of North Atlantic right whales (NARWs) using deep-learning detection of animals from satellite imagery. However, detection of these animals is already extremely difficult given their <a href="https://www.neaq.org/about-us/press-room/press-releases/2022-population-estimate-north-atlantic-right-whale/">low numbers</a>, and their infrequent surface times + confounding variables like ships and cloud cover made things even more difficult. 
-
-Last August, researchers at the University of Maryland created the SeaDroneSim2 benchmark suite based on the Blender game engine. They generated 2,000 novel whale images and found this improved whale detection by approximately 15%, using a 10% real data augmentation (preprint <a href="https://arxiv.org/abs/2308.07766">here</a>). We hope to build upon this work and showcase the potential for synthetic imagery developed from generative AI in the field of biology!
-
-<div class = "center">
-    <img class="pro-img" width="500px" src="/satellitewhale.png"/>
-    <h4>Right whale aerial and satellite image captured by smartWhales initiative.</h4>
-</div>
+<p class="project-description">Q2: Using oceanographic data (namely salinity, temperature, and density/stratification) generated from Rutgers' DOPPIO model and CTD profiles taken during eDNA sampling to predict fish community structure using random forests. This page will be updated with preliminary results at the end of the REU August 9th; for continuous updates or to preview code please visit the GitHub page linked above. For a map of eDNA stations (will also be updated as I accumulate more data), click <a href ="https://www.google.com/maps/d/u/0/edit?mid=1O0FkFMXOdc6LRBarOZB-fRrcTFiQ0r8&usp=sharing">here.</a></p>
 
 <div></div>
 
-### Current Progress
+### Rationale
 
-I spent most of the past semester and a half familiarizing myself with generative AI paradigms. This first involved using text-to-image models such as Midjourney and GPT4 (which use diffusion models under the hood) to create sample training images - similar work has been done using text prompts in GPT4 to <a href="https://chemrxiv.org/engage/api-gateway/chemrxiv/assets/orp/resource/item/647d305dbe16ad5c577b6627/original/prompt-engineering-of-gpt-4-for-chemical-research-what-can-cannot-be-done.pdf">synthesize new classes of organic molecules</a>. Presently, diffusion models are the class of generative AI models that create the highest-quality images, and do so by being trained on extensive amounts of data. Many AI image generation services, such as Adobe Firefly, DALL-E 3, and others use pre-trained diffusion models to allow users to quickly create novel outputs. 
+Understanding how fish communities change/move with the seasons is important for management, and this project does so in a cost-effective and non-invasive way using environmental DNA (eDNA). eDNA allows scientists to collect genetic material shed by fish into the water using water sampling rather than trawls or nets. By combining this genetic information with oceanographic data like temperature and salinity, we can see how different ocean conditions affect where fish live and how they behave, and whether this relationship is affected by seasonality. Moreover, this research is particularly relevant for New Jersey coastal management as it comes at a time with massive offshore wind deployments planned off the Jersey coast. Understanding how fish communities interact with their environment can help in making informed decisions about where to place these wind farms to minimize their impact on marine life. 
 
-Below are a couple AI-generated whales (I first attempted to replicate drone and underwater images rather than satellite, as those were far easier) I made using Midjourney and Adobe Firefly. Despite my best efforts with prompt engineering and supplying the models with reference images, the strong priors/bias of the base large language models makes generating right whales fairly difficult as most whales turn out to look like humpbacks - unsurprising, given the models have seen far more of those than anything else.
+<div class="center">
+    <img class="pro-img" width="500px" src="/offshorewind.jpg"/>
+</div>
 
-<div class = "center">
-    <img class="pro-img" width="400px" src="/narwmidjourney.png"/>
-    <h4>Generated in Midjourney using "right whale satellite image birds eye view taken from drone"</h4>
-    <img class="pro-img" width="400px" src="/fireflywhale.png"/>
-    <h4>Generated in Adobe Firefly using "Humpback whale from above, aerial view, drone image, 8k uhd national geographic award winning photo, photorealistic style perfect sea background." Task failed successfully?</h4>
+From a more technical perspective, this research also seeks to apply new computing methods like neural networks (autoencoders) and tree-based machine learning models towards analysis of eDNA data, serving as a framework to guide future research.
+
+<div></div>
+
+### Methodology and Principal Results
+
+<p class="project-description">Q1: See the GitHub repo with all code for this question - just finished analysis! Took heavy inspiration from <a href="https://onlinelibrary.wiley.com/doi/10.1111/1755-0998.13861">Lamperti et al. 2023</a> for the design here. I tested 4 different dimensionalty reduction techniques, PCA, tSNE, UMAP and VAE. Then, I ran multiple regression matrices on the Jaccard distance and Euclidean distance of reduced-dimension data to evaluate how well the high-dimensional structure of eDNA abundance data is represented in two dimensions. I also ran k-means clustering with k=3 on each method's 2D encoding to compare various clustering metrics. My results for this question are in the table below!</p>
+
+<div class="center">
+    <img class="pro-img" width="500px" src="/figure1.png" alt="first image of your project." />
 </div>
 
 <div></div>
 
-As such, our research focus has shifted from prompt engineering to model fine-tuning using low-rank augmentation, or <a href="https://huggingface.co/docs/diffusers/en/training/lora">LoRA</a>. LoRA is a process where the base large language model for image generation has the number of trainable parameters reduced significantly and is then augmented using a small dataset of new images, essentially allowing the model to specialize in generating a certain labeled class of image. Below is an image for a right whale generated by a right whale LoRA I built in Hugging Face, where I provided a Stable Diffusion model with ~15 images from NOAA's Kaggle competition for right whale detection from aerial images. Clearly, it's much more like a right whale! You can find the LoRA and generate your own images <a href ="https://huggingface.co/henrysun9074/north-atlantic-right-whale-lora-mk-1?text=A+drone+photo+of+a+right+whale+swimming+in+the+ocean+near+the+surface">here</a>.
+
+<p class="project-description">Q2: I'm using sklearn for training a simple random forest classifier. eDNA data was in the form of a .csv with relative abundance values (ranging from 0 to 1) for several dozen detected species. For classification purposes, read abundance was converted to a binary format where all species detected at a particular site were represented as a 1. The model was then asked to predict the presence/absence of each species using surface and bottom temperature, salinity, and stratification. Then, I used k-means clustering to identify the optimal # of fish communities by season, group eDNA stations into communities, and predict community assignment from the same oceanographic variables. </p>
 
 <div></div>
 
-<div class = "center">
-    <img class="pro-img" width="500px" src="/whalelora.png"/>
-</div>
-<div></div>
-<div></div>
+### Project Outputs and Future Directions
 
+<div class="center">
+    <img class="pro-img" width="500px" src="/VAE-out.png" alt="first image of your project."/>
+    <h4>Above: Initial VAE clustering of eDNA samples taken across three seasons. VAE outputs did not exhibit strong clustering and performed poorly in terms of capturing variation within the data.<h4>
+ </div>
 
-### Future Plans
+### Links to Project Outputs: 
+<a href="https://drive.google.com/file/d/1x8JHUT7h3VcprLczOtX2KPqdUL2vghds/view?usp=sharing">Final Poster</a>, 
+<a href ="https://docs.google.com/document/d/1yZCSKR0KeJFRHDyaQCTumU_mIHaK1x27gXaZD4smk2Y/edit?usp=sharing">Initial Proposal</a>
 
-While promising (and very insightful), what we've done so far is not good enough. This fall, I'm planning to dive deep into fine-tuning with different parameters to build a dataset of satellite right whale training images. Then, we can test the original Smartwhales deep learning model for detection from satellite images on the new dataset containing real and synthetic images and evaluate its performance. 
-
-Additionally, with support from NC Space Grant and a clearer research focus, I am directing a team of undergraduates starting Fall 2024 to expand our research focus beyond just right whales and dive into applying generative AI imagery across a whole host of biological problems, depending on student interests. For instance, we are planning to determine using prompt engineering what types of natural imagery (such as drone images, which our lab has a ton of) and what study systems/organisms are most faithfully recreated using AI, and the techniques by which that can best be accomplished. 
-
-From an email I sent to interested students: "With a noticeable gap in research seeking to leverage the potential of generative AI in ecology and conservation biology, we aim to address this deficiency. Dave and I are looking to write a short, methods-based publication regarding its applications for training dataset augmentation, and I am also aiming to present this work at >=1 conference over the next year. Beyond this paper, this project will also likely generate publishable results regarding 1- prompt engineering techniques in genAI for endangered species conservation or other biological applications, and 2- the performance of the NARW deep learning detection model after synthetic data augmentation."
+See the final poster for a more concise look at the direct model results, especially for Q2. Models were generally far more accurate in summer stratified than winter mixed seasons, with dominant taxa also differing by season. I'm looking to write up the results for this project and get it published this fall! 
