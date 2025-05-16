@@ -48,11 +48,13 @@ eDNA allows scientists to collect genetic material shed by fish into the water u
     <img class="pro-img" width="500px" src="/Fig4.jpg" alt="first image of your project." />
 </div>
 
-
 <div></div>
 
-### Links to Project Outputs: 
-<a href="https://drive.google.com/file/d/1x8JHUT7h3VcprLczOtX2KPqdUL2vghds/view?usp=sharing">Final Poster</a>, 
-<a href ="https://docs.google.com/document/d/1yZCSKR0KeJFRHDyaQCTumU_mIHaK1x27gXaZD4smk2Y/edit?usp=sharing">Initial Proposal</a>
+### Outputs: 
+<p>
+   Project poster: click
+    <a href="/websitereuposter.pdf" target="_blank">here</a>
+    to open in a new tab. I presented this poster at <a href="https://www.aslo.org/charlotte-2025/">ASLO 2025</a>.
+</p>
 
-See the final poster for a more concise look at all project outputs I presented this poster at ASLO 2025.
+<embed class="pdf-embed" src="/websitereuposter.pdf" type="application/pdf" width=500px height=500px/>

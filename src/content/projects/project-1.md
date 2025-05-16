@@ -30,9 +30,10 @@ Diffusion models work by progressively adding and removing noise from input imag
 
 <center><img src="/finetune.png" width="500" class="center"></center>
 
-After testing a few other methods, like text-to-image or image-to-image zero-shot generation using generativ AI services, I settled on fine-tuning as the best approach. We were able to generate pretty realistic-looking whale images by fine-tuning diffusion models using DreamBooth and LoRA. I quantified effectiveness using Google Lens, where our fake right whales andn humpback whales made using fine-tuned LoRA models were able to effectively identified to the species level almost 100% of the time. I also built a pipeline for batch generation of synthetic imagery from fine-tuned diffusion models, resulting in large-scale image synthesis to be incorporated as part of future detection model training.
+After testing a few other methods, like text-to-image or image-to-image zero-shot generation using generative AI services, I settled on fine-tuning as the best approach. We were able to generate pretty realistic-looking whale images by fine-tuning diffusion models using DreamBooth and LoRA. I quantified effectiveness using Google Lens, where our fake right whales and humpback whales made using fine-tuned LoRA models were able to effectively identified to the species level almost 100% of the time. I also built a pipeline for batch generation of synthetic imagery from fine-tuned diffusion models, resulting in large-scale image synthesis to be incorporated as part of future detection model training.
 
 <center><img src="/batchgen.png" width = "300" class="center"></center>
+<h4>Batch generation of 512 synthetic humpback whales made using a fine-tuned Stable Diffusion model</h4>
 
 The code for all this, alongside links to presentations and posters I’ve given, are in the GitHub link at the top of this page. Contact me if interested in a copy of my senior thesis, which is far more comprehensive with regards to the challenges and opportunities of diffusion-based generative AI for dataset augmentation. 
 
