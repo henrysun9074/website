@@ -2,34 +2,38 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 const pageTitle = "Personal";
+const slideshowImages = [
+  "/Animal1.jpeg",
+  "/Animal2.jpeg",
+  "/Animal3.jpeg",
+//   "/"
+];
 --- 
 <Layout pageTitle={pageTitle}>
     <div class="gif">
         <img width="300" height="250" alt="RaccoonLaptopGif" src="/blog.webp"/>
     </div>
     <h2>Who am I?</h2>
-    <p>
-        I still need to build out these pages, but hopefully what's there is enough to convince you (mostly to convince myself) that I don't just sit in the lab 24 hours a day.
-    </p>
+        <p>I spend most of my free time playing basketball or consuming basketball content religiously. I'm from Maryland and support the Wizards, though, so there's not too much to write about. At least the Mystics won the WNBA finals one year.</p>
     <ul role="list" class="link-card-grid">
-        <Card
+        <!-- <Card
             url="/basketball"
             image="/basketball2.jpg"
             title="Basketball" 
             body="Ethical hoops"
-        />
+        /> -->
         <Card
             url="/music"
             image="/music 3.jpg"
             title="Music"
             body="Take the blue pill"
         />
-        <Card
+        <!-- <Card
             url="/animals"
             image="/animals.jpg"
             title="Animals"
             body="Cool animal finds"
-        />
+        /> -->
         <Card
             url="/cooking"
             image="/cooking.jpg"
@@ -37,4 +41,79 @@ const pageTitle = "Personal";
             body="Mostly Chinese food"
         />
     </ul>
+        <p>
+        I still need to build out these pages, but hopefully what's there is enough to convince you (mostly to convince myself) that I don't just sit in the lab 24 hours a day.
+    </p>
+    <p>I also enjoy going outside and looking for animals. I want (need) to find tardigrades! Below is a cool spotted salamander, Alexmandera, from this spring. </p>
+
+  <!-- Slideshow -->
+  <div class="slideshow">
+    <img id="slideshow-img" src={slideshowImages[0]} alt="Slideshow image" width="400" height="300" />
+        <div class="slideshow-controls">
+        <button id="prev-slide">Previous</button>
+        <button id="next-slide">Next</button>
+        </div>
+  </div>
+
+  <p>Also on the to-do list: figuring out how to build a working slideshow in JS D:
+  </p>
+  <!-- JSON data injection -->
+  <script type="application/json" id="slideshow-data">
+    {JSON.stringify(slideshowImages)}
+  </script>
+
+  <!-- Slideshow JS logic -->
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", () => {
+    const images = JSON.parse(document.getElementById("slideshow-data").textContent);
+    let currentIndex = 0;
+
+    const imgEl = document.getElementById("slideshow-img");
+    const prevBtn = document.getElementById("prev-slide");
+    const nextBtn = document.getElementById("next-slide");
+
+    function showSlide(index) {
+      if (!imgEl) return;
+      imgEl.src = images[index];
+    }
+
+    prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showSlide(currentIndex);
+    });
+
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      showSlide(currentIndex);
+    });
+  });
+</script>
+
+  <style>
+    .slideshow {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .slideshow img {
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    .slideshow-controls {
+      margin-top: 0.5rem;
+    }
+    .slideshow-controls button {
+      margin: 0 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      background-color: #444;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .slideshow-controls button:hover {
+      background-color: #666;
+    }
+  </style>
+</Layout>
+
 </Layout>
